@@ -11,7 +11,7 @@ def minOperations(n):
     number of min operations needed to achieve n H chars
     """
     if n < 2:
-        return 0 #impossible to achieve n < 2 H chars
+        return 0
 
     ops = 0
     factor = 2
