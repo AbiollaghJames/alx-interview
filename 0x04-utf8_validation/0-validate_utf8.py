@@ -21,17 +21,15 @@ def validUTF8(data):
         if num_bytes == 0:
             if byte_to_binary.startswith('110'):
                 num_bytes = 1
-            if byte_to_binary.startswith('1110'):
+            elif byte_to_binary.startswith('1110'):
                 num_bytes = 2
-            if byte_to_binary.startswith('11110'):
+            elif byte_to_binary.startswith('11110'):
                 num_bytes = 3
-            if byte_to_binary.startswith('10'):
+            elif byte_to_binary.startswith('10'):
                 return False
         else:
             if not byte_to_binary.startswith('10'):
                 return False
             num_bytes -= 1
 
-    if num_bytes != 0:
-        return False
-    return True
+    return num_bytes == 0
