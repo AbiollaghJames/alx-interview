@@ -18,6 +18,8 @@ def validUTF8(data):
     for byte in data:
         byte_to_binary = bin(byte).replace('0b', '').rjust(8, '0')[-8:]
         if num_bytes == 0:
+            if byte_to_binary.startswith('0'):
+                continue
             if byte_to_binary.startswith('110'):
                 num_bytes = 1
             if byte_to_binary.startswith('1110'):
