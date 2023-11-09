@@ -10,7 +10,7 @@ request(url, async (err, response, body) => {
   }
   for (const charId of JSON.parse(body).characters) {
     await new Promise((resolve, reject) => {
-      request(characterId, (err, response, body) => {
+      request(charId, (err, response, body) => {
         if (err) {
           reject(err);
         }
