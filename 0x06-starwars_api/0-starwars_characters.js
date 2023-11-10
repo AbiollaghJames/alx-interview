@@ -1,5 +1,6 @@
 #!/usr/bin/node
 
+//starwars API - returns chars name
 const request = require('request');
 const movId = process.argv[2];
 const url = `https://swapi-api.alx-tools.com/api/films/${movId}`;
