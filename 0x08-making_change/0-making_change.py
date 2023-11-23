@@ -23,7 +23,7 @@ def makeChange(coins, total):
     """
     if total <= 0:
         return 0
-    
+
     min_coins = [float('inf')] * (total + 1)
     min_coins[0] = 0
 
